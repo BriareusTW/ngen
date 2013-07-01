@@ -1,0 +1,8 @@
+Description:
+    Generates an empty angularjs controller.
+
+Example:
+    rails generate ng:controller module_name/controller_name [service1 service2 ...]
+
+    This will create:
+        app/assets/javascripts/[module_name]/controllers/[controller_name].js.coffee

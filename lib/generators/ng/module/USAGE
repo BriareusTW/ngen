@@ -1,0 +1,8 @@
+Description:
+    Generates an empty angularjs module.
+
+Example:
+    rails generate ng:service module_name
+
+    This will create:
+        app/assets/javascripts/[module_name]/index.js.coffee

@@ -1,0 +1,8 @@
+Description:
+    Generates an empty angularjs filter.
+
+Example:
+    rails generate ng:filter module_name/filter_name
+
+    This will create:
+        app/assets/javascripts/[module_name]/filters/[filter_name].js.coffee

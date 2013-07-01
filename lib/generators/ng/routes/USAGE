@@ -1,0 +1,8 @@
+Description:
+    Generates an empty angularjs routes for module.
+
+Example:
+    rails generate ng:routes module_name
+
+    This will create:
+        app/assets/javascripts/[module_name]/config/routes.js.coffee

@@ -1,0 +1,8 @@
+Description:
+    Generates an empty angularjs directive.
+
+Example:
+    rails generate ng:directive module_name/directive_name
+
+    This will create:
+        app/assets/javascripts/[module_name]/directives/[directive_name].js.ls
