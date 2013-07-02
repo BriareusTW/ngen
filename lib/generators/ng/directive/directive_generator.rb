@@ -6,7 +6,7 @@ module Ng
 
     def copy_binding_file
       template 'directive.js.coffee',
-               "app/assets/javascripts/#{module_path}/directives/#{object_file}.js.coffee"
+               "#{module_path}/directives/#{object_file}.js.coffee"
     end
   end
 end
