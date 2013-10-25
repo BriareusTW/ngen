@@ -1,0 +1,11 @@
+describe '<%= module_name %> directive: <%= object_name %>', ->
+  beforeEach module '<%= module_name %>'
+
+  beforeEach inject ($compile, $rootScope) ->
+    @compile = $compile
+    @scope = $rootScope
+
+  it 'able to be compiled', ->
+    elem = @compile('<div <%= tag_name %>></div>')(@scope)
+    @scope.$digest()
+    expect(elem).toBeDefined()
