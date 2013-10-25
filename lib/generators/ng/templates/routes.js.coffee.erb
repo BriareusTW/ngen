@@ -1,6 +1,6 @@
 module = angular.module '<%= module_name %>'
 
-module.config ['$routeProvider', '$locationProvider', ($routeProvider, $locationProvider) ->
+module.config ($routeProvider, $locationProvider) ->
   r = (resolver) -> [resolver, (service) -> service()]
 
   $routeProvider
@@ -18,5 +18,4 @@ module.config ['$routeProvider', '$locationProvider', ($routeProvider, $location
     # .otherwise(params)
     #   params: Mapping information to be assigned to $route.current
 
-  $locationProvider.html5Mode(true)
-]
+  $locationProvider.html5Mode(true).hashPrefix('!')

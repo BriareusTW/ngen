@@ -5,7 +5,7 @@ module Ng
     include BaseGenerator
 
     def copy_binding_file
-      template 'routes.js.coffee',
+      template 'routes.js.coffee.erb',
                "#{module_path}/config/routes.js.coffee"
     end
 

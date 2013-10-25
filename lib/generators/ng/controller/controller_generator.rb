@@ -5,20 +5,12 @@ module Ng
     include BaseGenerator
 
     def copy_binding_file
-      template 'controller.js.coffee',
+      template 'controller.js.coffee.erb',
                "#{module_path}/controllers/#{object_file}.js.coffee"
     end
 
     def services
       @services ||= ['$scope'] + @args
-    end
-
-    def unquoted_services
-      services.join(', ')
-    end
-
-    def quoted_services
-      services.map { |service| "'#{service}'" }.join(', ')
     end
   end
 end

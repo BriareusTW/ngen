@@ -5,7 +5,7 @@ module Ng
     include BaseGenerator
 
     def copy_binding_file
-      template 'filter.js.coffee',
+      template 'filter.js.coffee.erb',
                "#{module_path}/filters/#{object_file}.js.coffee"
     end
   end
