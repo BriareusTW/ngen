@@ -1,0 +1,9 @@
+describe '<%= module_name %> controller: <%= object_name.camelize %>', ->
+  beforeEach module '<%= module_name %>'
+
+  beforeEach inject ($controller) ->
+    @scope = {}
+    @controller = $controller('<%= object_name.camelize %>', $scope: @scope)
+
+  it 'should pass', ->
+    expect(@scope).to.equal {}

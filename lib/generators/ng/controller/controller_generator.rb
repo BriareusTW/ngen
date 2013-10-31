@@ -7,6 +7,8 @@ module Ng
     def copy_binding_file
       template 'controller.js.coffee.erb',
                "#{module_path}/controllers/#{object_file}.js.coffee"
+      template 'controller_spec.js.coffee.erb',
+               "#{module_spec_path}/controllers/#{object_file}_spec.js.coffee"
     end
 
     def services
