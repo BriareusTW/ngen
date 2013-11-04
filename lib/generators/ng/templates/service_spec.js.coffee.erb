@@ -5,4 +5,4 @@ describe '<%= module_name %> service: <%= object_name %>', ->
     @service = $injector.get('<%= object_name %>')
 
   it 'should be defined', ->
-    expect(@service).toBeDefined()
+    expect(@service).to.exist

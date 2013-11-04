@@ -8,4 +8,4 @@ describe '<%= module_name %> directive: <%= object_name %>', ->
   it 'able to be compiled', ->
     elem = @compile('<div <%= tag_name %>></div>')(@scope)
     @scope.$digest()
-    expect(elem).toBeDefined()
+    expect(elem).to.exist
