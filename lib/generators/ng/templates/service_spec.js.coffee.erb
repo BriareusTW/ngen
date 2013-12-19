@@ -3,6 +3,3 @@ describe '<%= module_name %> service: <%= object_name %>', ->
 
   beforeEach inject ($injector) ->
     @service = $injector.get('<%= object_name %>')
-
-  it 'should be defined', ->
-    expect(@service).to.exist

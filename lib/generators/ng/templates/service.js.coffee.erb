@@ -1,3 +1,5 @@
+#= require <%= module_path %>
+
 module = angular.module '<%= module_name %>'
 
 # Constant
@@ -8,7 +10,7 @@ module = angular.module '<%= module_name %>'
 #   ->
 
 # Factory
-# module.factory '<%= object_name %>', -> # $getFn
+module.factory '<%= object_name %>', ->
 
 # Service
 # module.service '<%= object_name %>', constructor
