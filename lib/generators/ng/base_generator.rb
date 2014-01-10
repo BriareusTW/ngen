@@ -36,13 +36,15 @@ module Ng
       "#{module_name}.#{object_name}"
     end
 
+    def module_dirname
+      module_parts.map(&:underscore).join('/')
+    end
+
     def module_path
-      module_dirname = module_parts.map(&:underscore).join('/')
       "app/assets/javascripts/#{module_dirname}"
     end
 
     def module_spec_path
-      module_dirname = module_parts.map(&:underscore).join('/')
       "spec/javascripts/#{module_dirname}"
     end
   end
