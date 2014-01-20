@@ -1,8 +1,10 @@
 describe '<%= module_name %> directive: <%= object_name %>', ->
+  $compile = $scope = elem = null
+
   beforeEach module '<%= module_name %>'
 
-  beforeEach inject ($compile, $rootScope) ->
-    @compile = $compile
-    @scope = $rootScope
-    @elem = @compile('<div <%= tag_name %>></div>')(@scope)
-    @scope.$digest()
+  beforeEach inject ($injector) ->
+    $compile = $injector.get('$compile')
+    $scope   = $injector.get('$rootScope').$new()
+    elem     = $compile('<div <%= tag_name %>></div>')($scope)
+    $scope.$digest()

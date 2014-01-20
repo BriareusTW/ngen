@@ -1,5 +1,7 @@
 describe '<%= module_name %> service: <%= object_name %>', ->
+  <%= object_name %> = null
+
   beforeEach module '<%= module_name %>'
 
   beforeEach inject ($injector) ->
-    @service = $injector.get('<%= object_name %>')
+    <%= object_name %> = $injector.get('<%= object_name %>')

@@ -1,6 +1,9 @@
 describe '<%= module_name %> controller: <%= object_name.camelize %>', ->
+  $scope = $controller = null
+
   beforeEach module '<%= module_name %>'
 
-  beforeEach inject ($rootScope, $controller) ->
-    @scope = $rootScope
-    @controller = $controller('<%= object_name.camelize %>', $scope: @scope)
+  beforeEach inject ($injector) ->
+    $scope      = $injector.get('$rootScope').$new()
+    $controller = $injector.get('$controller')
+    $controller('<%= object_name.camelize %>', $scope: $scope)
